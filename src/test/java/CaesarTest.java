@@ -26,4 +26,10 @@ public class CaesarTest {
         Encrypt newEncryption = new Encrypt("ABC", 1);
         assertEquals("BCD", newEncryption.forward());
     }
+
+    @Test
+    public void decryptsSingleCharacters() {
+        Decrypt newDecryption = new Decrypt("b", 1);
+        assertEquals("a", newDecryption.backward());
+    }
 }
