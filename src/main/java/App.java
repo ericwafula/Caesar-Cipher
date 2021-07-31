@@ -9,9 +9,10 @@ public class App {
 
 //        prompts User for input
         System.out.println("Enter Encryption Key:");
-        String key = newConsole.readLine();
+        Integer key = Integer.parseInt(newConsole.readLine());
 
 //        Checks for number digits
-//        Encrypt newEncryption = new Encrypt();
+        Encrypt newEncryption = new Encrypt(text, key);
+
     }
 }
