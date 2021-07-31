@@ -10,20 +10,20 @@ public class CaesarTest {
     }
 
     @Test
-    public void substitute_substitutesSingleLowerCaseCharacters() {
-        Substitute substitute = new Substitute("z", 1);
-        assertEquals("a", substitute.forward());
+    public void Encrypt_EncryptsSingleLowerCaseCharacters() {
+        Encrypt newEncryption = new Encrypt("z", 1);
+        assertEquals("a", newEncryption.forward());
     }
 
     @Test
-    public void substitute_substitutesWordsLowerCaseCharacters() {
-        Substitute substitute = new Substitute("abc", 1);
-        assertEquals("bcd", substitute.forward());
+    public void Encrypt_EncryptsWordsLowerCaseCharacters() {
+        Encrypt newEncryption = new Encrypt("abc", 1);
+        assertEquals("bcd", newEncryption.forward());
     }
 
     @Test
-    public void substitute_substitutesUpperCaseWords() {
-        Substitute substitute = new Substitute("ABC", 1);
-        assertEquals("BCD", substitute.forward());
+    public void Encrypt_EncryptsUpperCaseWords() {
+        Encrypt newEncryption = new Encrypt("ABC", 1);
+        assertEquals("BCD", newEncryption.forward());
     }
 }

@@ -1,15 +1,14 @@
-public class Substitute {
+public class Encrypt {
     private int mKey;
     private String mText;
 
-    Substitute(String text, int key) {
+    Encrypt(String text, int key) {
         this.mText = text;
         this.mKey = key;
     }
 
     public String forward(){
         char[] newCharText = mText.toCharArray();
-
 
         for (int i = 0; i < newCharText.length; i++){
             //        For uppercase letters
