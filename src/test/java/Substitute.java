@@ -1,16 +1,21 @@
 public class Substitute {
-    public int mKey;
-    public char mText;
+    private int mKey;
+    private String mText;
 
-    public Substitute(char text, int key) {
+    Substitute(String text, int key) {
         this.mText = text;
         this.mKey = key;
     }
 
-    public char forward(){
-        int castText = (int) mText;
-        castText += this.mKey;
-        char castBackToChar = (char) castText;
-        return castBackToChar;
+    public String forward(){
+        char[] newCharText = mText.toCharArray();
+
+        for (int i = 0; i < newCharText.length; i++){
+            int castText = (int) newCharText[i] + this.mKey;
+            newCharText[i] = (char)castText;
+        }
+
+        final String newS = String.valueOf(newCharText);
+        return newS;
     }
 }

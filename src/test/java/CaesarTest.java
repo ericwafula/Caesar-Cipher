@@ -5,14 +5,19 @@ import static org.junit.Assert.*;
 public class CaesarTest {
     @Test
     public void checkInput_checksIfInputIsString() {
-        CheckForDigit encrypt = new CheckForDigit();
-        assertEquals(false, encrypt.isString("123"));
+        CheckForDigit value = new CheckForDigit();
+        assertEquals(false, value.isString("123"));
     }
 
     @Test
-    public void substitute_subsitutesSingleLowerCaseCharacters() {
-        Substitute substitute = new Substitute('a', 1);
-        assertEquals('b', substitute.forward());
-        System.out.println(substitute.forward());
+    public void substitute_substitutesSingleLowerCaseCharacters() {
+        Substitute substitute = new Substitute("a", 1);
+        assertEquals("b", substitute.forward());
+    }
+
+    @Test
+    public void substitute_substitutesSentenceLowerCaseCharacters() {
+        Substitute substitute = new Substitute("abc", 1);
+        assertEquals("bcd", substitute.forward());
     }
 }
