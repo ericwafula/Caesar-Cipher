@@ -10,8 +10,9 @@ public class Substitute {
     public String forward(){
         char[] newCharText = mText.toCharArray();
 
+//        For lowercase letters
         for (int i = 0; i < newCharText.length; i++){
-            int castText = (int) newCharText[i] + this.mKey;
+            int castText = ((int) newCharText[i] - 97 + this.mKey) % 26 + 97;
             newCharText[i] = (char)castText;
         }
 

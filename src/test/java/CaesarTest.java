@@ -11,8 +11,8 @@ public class CaesarTest {
 
     @Test
     public void substitute_substitutesSingleLowerCaseCharacters() {
-        Substitute substitute = new Substitute("a", 1);
-        assertEquals("b", substitute.forward());
+        Substitute substitute = new Substitute("z", 1);
+        assertEquals("a", substitute.forward());
     }
 
     @Test
