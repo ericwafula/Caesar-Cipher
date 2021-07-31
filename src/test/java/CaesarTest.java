@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 public class CaesarTest {
     @Test
-    public void checkInput_checksIfInputIsString() {
+    public void checkInput_checksIfInputIsString() throws Exception {
         CheckForDigit value = new CheckForDigit();
         assertEquals(false, value.isString("123"));
     }
