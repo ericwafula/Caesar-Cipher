@@ -28,8 +28,14 @@ public class CaesarTest {
     }
 
     @Test
-    public void decryptsSingleCharacters() {
+    public void decryptsSmallCaseSingleCharacters() {
         Decrypt newDecryption = new Decrypt("b", 1);
         assertEquals("a", newDecryption.backward());
+    }
+
+    @Test
+    public void decryptsSmallCaseMultipleCharacterWords() {
+        Decrypt newDecryption = new Decrypt("bcd", 1);
+        assertEquals("abc", newDecryption.backward());
     }
 }
