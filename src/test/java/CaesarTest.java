@@ -16,8 +16,14 @@ public class CaesarTest {
     }
 
     @Test
-    public void substitute_substitutesSentenceLowerCaseCharacters() {
+    public void substitute_substitutesWordsLowerCaseCharacters() {
         Substitute substitute = new Substitute("abc", 1);
         assertEquals("bcd", substitute.forward());
+    }
+
+    @Test
+    public void substitute_substitutesUpperCaseWords() {
+        Substitute substitute = new Substitute("ABC", 1);
+        assertEquals("BCD", substitute.forward());
     }
 }

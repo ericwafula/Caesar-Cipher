@@ -12,8 +12,13 @@ public class Substitute {
 
 //        For lowercase letters
         for (int i = 0; i < newCharText.length; i++){
-            int castText = ((int) newCharText[i] - 97 + this.mKey) % 26 + 97;
-            newCharText[i] = (char)castText;
+            if (Character.isUpperCase(newCharText[i])){
+                int castText = ((int) newCharText[i] - 65 + this.mKey) % 26 + 65;
+                newCharText[i] = (char)castText;
+            } else if (Character.isLowerCase(newCharText[i])){
+                int castText = ((int) newCharText[i] - 97 + this.mKey) % 26 + 97;
+                newCharText[i] = (char)castText;
+            }
         }
 
         final String newS = String.valueOf(newCharText);
