@@ -5,14 +5,14 @@ import static org.junit.Assert.*;
 public class CaesarTest {
     @Test
     public void checkInput_checksIfInputIsString() throws Exception {
-        CheckForDigit value = new CheckForDigit();
-        assertEquals(false, value.isString("123"));
+        Encrypt value = new Encrypt("z", 25);
+        assertEquals(true, value.isString());
     }
 
     @Test
     public void checkInput_checksIfKeyIsBetween1to25() throws Exception {
-        CheckForDigit value = new CheckForDigit();
-        assertEquals(true, value.isInRange(25));
+        Encrypt value = new Encrypt("z", 25);
+        assertEquals(true, value.isInRange());
     }
 
     @Test

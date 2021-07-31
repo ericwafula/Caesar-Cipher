@@ -6,6 +6,17 @@ public class Decrypt {
         this.mText = text;
         this.mKey = key;
     }
+
+    public boolean isString(){
+        for (int i = 0; i < this.mText.length(); i++){
+            if (this.mText.charAt(i) >= '0' && this.mText.charAt(i) <= '9'){
+                System.out.println("Expected characters or words");
+                return false;
+            }
+        }
+        return true;
+    }
+
     public String backward(){
         char[] newCharText = mText.toCharArray();
 

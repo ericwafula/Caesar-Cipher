@@ -7,6 +7,20 @@ public class Encrypt {
         this.mKey = key;
     }
 
+    public boolean isString(){
+        for (int i = 0; i < this.mText.length(); i++){
+            if (this.mText.charAt(i) >= '0' && this.mText.charAt(i) <= '9'){
+                System.out.println("Expected characters or words");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isInRange(){
+        return this.mKey >= 1 && this.mKey <= 25;
+    }
+
     public String forward(){
         char[] newCharText = mText.toCharArray();
 
