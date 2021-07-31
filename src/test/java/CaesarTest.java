@@ -10,6 +10,12 @@ public class CaesarTest {
     }
 
     @Test
+    public void checkInput_checksIfKeyIsBetween1to25() throws Exception {
+        CheckForDigit value = new CheckForDigit();
+        assertEquals(true, value.isInRange(25));
+    }
+
+    @Test
     public void Encrypt_EncryptsSingleLowerCaseCharacters() {
         Encrypt newEncryption = new Encrypt("z", 1);
         assertEquals("a", newEncryption.forward());
