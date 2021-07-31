@@ -35,8 +35,8 @@ public class CaesarTest {
 
     @Test
     public void decryptsSmallCaseSingleCharacters() {
-        Decrypt newDecryption = new Decrypt("b", 1);
-        assertEquals("a", newDecryption.backward());
+        Decrypt newDecryption = new Decrypt("z", 1);
+        assertEquals("y", newDecryption.backward());
     }
 
     @Test

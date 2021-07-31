@@ -4,13 +4,14 @@ public class App {
     public static void main (String[] args){
         Console newConsole = System.console();
 //        prompts User for input
-        System.out.println("Enter Text to be Encrypted:");
+        System.out.println("Input String:");
         String text = newConsole.readLine();
 
 //        prompts User for input
-        System.out.println("Enter Encryption Key:");
+        System.out.println("Encryption Key:");
         Integer key = Integer.parseInt(newConsole.readLine());
 
+//        creates new encryption object
         Encrypt newEncryption = new Encrypt(text, key);
 
 //        Checks for number digits in text to be encrypted
@@ -24,7 +25,14 @@ public class App {
         }
 //        Prints Encrypted text
         String encryptedText = newEncryption.forward();
-        System.out.println(String.format("CypherText: %s", encryptedText));
+        System.out.println(String.format("Encrypted String: %s", encryptedText));
+
+        //        creates new decryption object
+        Decrypt newDecryption = new Decrypt(encryptedText, key);
+
+        //        Prints Decrypted text
+        String deryptedText = newDecryption.backward();
+        System.out.println(String.format("Decrypted String: %s", deryptedText));
 
     }
 }
